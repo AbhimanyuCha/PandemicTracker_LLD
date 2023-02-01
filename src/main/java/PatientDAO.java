@@ -15,6 +15,8 @@ public class PatientDAO {
     }
 
     public Patient getPatient(String name){
+        if(!patientMap.containsKey(name))
+            patientMap.put(name, new Patient(name));
         return patientMap.get(name);
     }
 }

@@ -1,8 +1,8 @@
 
 public class Patient {
-    String name;
-    public void setName(String newName){
-        name = newName;
+    private String name;
+    Patient(String name){
+        this.name = name;
     }
     public String getName(){
         return name;

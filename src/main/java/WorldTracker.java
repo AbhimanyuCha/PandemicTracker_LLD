@@ -1,15 +1,16 @@
 public class WorldTracker extends Tracker{
+    private State worldSummary;
     public WorldTracker(Tracker nextTracker){
         super(nextTracker);
+        worldSummary = new State();
     }
 
     @Override
-    void update() {
-
+    public void update(Patient patient, Disease disease, String status, String country, String state, String city) {
+        worldSummary.upd(patient, status);
     }
 
-    @Override
-    void get() {
-
+    public void print(){
+        worldSummary.print();
     }
 }
